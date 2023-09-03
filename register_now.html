@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/1665898949986 (1).jpeg">
+    <title>Registeration form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div class="header">
+        <div class="section">
+            <a href="index.html" class="logo">AISA <h4 style="color: rgb(169, 166, 166);">Artificial Intelliegence student Association</h4> </a>
+            <form action="" method="post" class="search-form">
+                <input type="text" name="search_box" placeholder=" search">
+                <button type="submit"class="fas fa-search" name="search-box"></button>
+            </form>
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+            </div>
+            <div class="profile">
+                <i class="fa-solid fa-user"></i>
+                <h3>Sabhya Lokhande</h3>
+                <span>student</span>
+                <a href="profile.html"class="btn">view profile</a>
+                <div class="profile-btns">
+                    <a href="login.html" class="option-btn">Login</a>
+                    <a href="register.html" class="option-btn">register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+    <sidebar>
+        <div class="side-bar">
+            <div class="nav-profile">
+                <i class="fa-solid fa-user"></i>
+                <h3>Sabhya Lokhande</h3>
+                <span>student</span>
+                <a href="profile.html"class="btn">view profile</a>
+            </div>
+            <div class="navbar">
+                <a href="home.html"><i class="fa-solid fa-house"><span>home</span></i></a>
+                <a href="about.html"><i class="fa-solid fa-question"><span>about us</span></i></a>
+                <a href="events.html"><i class="fa-solid fa-calendar-days"><span>events</span></i></a>
+            </div>
+        </div>
+    </sidebar>
+    <div class="register-container">
+        <h1>Register</h1>
+        <h3 style="font-size: 2rem; margin-top: 0.5rem;">Information about the event</h3>
+        <p style="font-size: 1.5rem;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet similique a itaque nulla aliquid voluptate laborum? Officia voluptatum, excepturi odio cupiditate repudiandae nam earum, provident perspiciatis quo doloribus dolores commodi.</p>
+        <form id="register-form" action="" method="POST">
+            <label for="Name">Name:</label>
+            <input type="text" id="Nmae" name="Name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="number">Phone Number:</label>
+            <input type="Number" id="number" name="number" required>
+
+            <label for="Branch">Branch:</label>
+            <input type="Branch" id="Branch" name="Branch" required>
+
+            <label for="division">Division:</label>
+            <input type="division" id="division" name="division" required>
+
+            <button type="submit" class="inline-btn">Register</button>
+        </form>
+    </div>
+    <footer>
+        <div class="footer">
+            &copy; copyright @2023 by <span>AISA club of DYPIEMR</span> | all rights reserved |
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

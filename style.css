@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@200;300;400;500;600&family=Poppins:ital,wght@1,200&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;  
+}
+body{
+    background-color:rgb(202, 199, 199);
+    padding-left: 30rem;
+}
+body.active{
+    padding-left: 0;
+}
+.section{
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.btn,
+.option-btn,
+.delete-btn,
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+    border-radius: 0.5rem;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    color: white;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1rem;
+}
+.btn,
+.option-btn,
+.delete-btn{
+    display:block;
+    width:100%;
+}
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+    display:inline-block;
+}
+.btn,
+.inline-btn{
+    background-color:rgba(112, 113, 116, 0.599);
+}
+.option-btn,
+.inline-option-btn{
+    background-color: rgba(147, 138, 138, 0.27);
+}
+.delete-btn,
+.inline-delete-btn{
+    background-color:red ;
+}
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover,
+.inline-btn:hover,
+.inline-option-btn:hover,
+.inline-delete-btn:hover{
+    background-color: black;
+    color: white;
+}
+.header{
+    background-color: rgba(255, 255, 255, 0.809);
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+.header .section{
+    padding: 1.5rem 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .section .logo{
+    color: black;
+    font-size: 1.5rem;
+
+}
+.search-form{
+    width: 15rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: rgba(234, 221, 221, 0.5);
+}
+.search-form input{
+    width: 100%;
+    background:none ;
+    color: black;
+}
+.search-form button{
+    font-size: 1.2rem;
+    color: black;
+    cursor: pointer;
+    opacity: 0.5;
+    background: none;
+}
+.search-form button:hover{
+    opacity: 1;
+}
+.icons div{
+    font-size: 1.5rem;
+    color: black;
+    border-radius: 0.5rem;
+    height: 3rem;
+    cursor: pointer;
+    width: 3rem;
+    line-height: 3rem;
+    background-color:rgba(234, 221, 221, 0.5) ;
+    text-align: center;
+    margin-left:0.5rem ;
+    opacity: 0.7;
+}
+.icons div:hover{
+    opacity: 1;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+#search-btn{
+    display: none;
+}
+.profile{
+    position: absolute;
+    top: 120%;right:2rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    width: 20rem;
+    transform: scale(0);
+    transform-origin: top right;
+}
+.profile.active{
+    transform: scale(1);
+    transition: 0.2s linear;
+}
+.profile h3{
+    font-size: 2rem;
+    color: black;
+}
+.profile span{
+    color: rgba(30, 29, 29, 0.5);
+    font-size: 1.3rem;
+}
+.profile i{
+    font-size:3rem ;
+    background-color:rgba(234, 221, 221, 0.5);
+    height: 5rem;
+    width:5rem;
+    text-align: center;
+    line-height: 5rem;
+    border-radius: 50%;
+}
+.side-bar{
+    position:fixed;
+    top:0;left:0;
+    height: 100vh;
+    width:30rem;
+    background-color:white ;
+    border: solid lightgrey 2.5px;
+    transform: 0.2s linear;
+}
+.nav-profile{
+    padding:2rem 2rem;
+    text-align: center;
+}
+.nav-profile i{
+    height: 10rem;
+    width:10rem;
+    font-size:5rem;
+    text-align: center;
+    line-height: 10rem;
+    border-radius: 50%;
+    background-color: lightgray;
+}
+.nav-profile h3{
+    font-size: 2rem;
+    color: black;
+}
+.nav-profile span{
+    color: rgba(30, 29, 29, 0.5);
+    font-size: 1.3rem;
+}
+.navbar{
+    margin-top: 1rem;
+}
+.navbar a{
+    display:block ;
+    padding: 1.5rem;
+    margin-left: 0.5rem ;
+    font-size:1.8rem;
+    opacity: 0.7;
+}
+.navbar a i{
+    color: black;
+    margin-right: 1.5rem;
+    transition: 0.2s linear;
+}
+.navbar span{
+    margin-left: 2rem;
+}
+.navbar a:hover{
+    opacity: 1.7;
+}
+.footer{
+    position: sticky;
+    bottom: 0;right: 0;left:0;
+    background-color: black;
+    border:solid black 2px;
+    color: white;
+    text-align: center;
+    height: 4rem;
+    width:100%;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+.side-bar.active{
+   left: -31rem;
+}
+.about{
+    background-color: white;
+    padding: 1.5rem;
+    margin: 0.25rem;
+    font-size: 1rem;
+}
+.home-img img{
+    width:100%;
+    height:40rem;
+   padding: 3rem;
+}
+.box-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.event-name img{
+    width:20rem ;
+    height: 15rem;
+    border-radius: 0.5rem;
+}
+.event-name h3{
+    margin-top: 0.5rem;
+}
+.events h1{
+    margin-top: 1.5rem;
+}
+.event-name p{
+    width: 20rem;
+}
+.box{
+    align-items: center;
+    background-color: rgba(131, 123, 123, 0.438);
+    width: fit-content;
+    height: 30rem;
+    border-radius:1rem;
+    padding: 3rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.events h1{
+    margin-left: 2rem;
+    font-size: 3rem;
+}
+.about ul{
+    margin-left: 2rem;
+}
+.user-main h1{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 2rem;
+}
+.details{
+    background-color: white;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: 1rem;
+    padding: 2rem;
+}
+.user{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.user i{
+    height: 10rem;
+    width: 10rem;
+    background-color:rgba(234, 221, 221, 0.5) ;
+    border-radius: 50%;
+    line-height: 10rem;
+    font-size: 5rem;
+    margin-bottom:0.5rem ;
+}
+.user h3{
+    font-size: 2rem;
+}
+.user p{
+    font-size: 2rem;
+   color: rgb(91, 87, 87);
+}
+.card-container{
+    height: 12rem;
+    width: 10rem;
+    background-color: rgba(128, 128, 128, 0.572);
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+.card a{
+    font-size: 1rem;
+}
+.card i{
+    background-color: white;
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    border-radius: 50%;
+}
+.card h3{
+    margin-top: 0.5rem;
+}
+.card span{
+    font-size: 1.25rem;
+}
+
+.form-container h1{
+    padding: 1rem;
+}
+#profile-form{
+ 
+    padding: 1rem;
+    background-color: white;
+    margin:1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+.form-container label{
+    display: block;
+    margin-bottom: 1rem;
+    color: black;
+    font-size: 1.5rem;
+}
+.form-container input{
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid black;
+    font-size: 1rem;
+    border-radius: 0.7rem;
+}
+.register-container{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    text-align: center;
+}
+.register-container label{
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+    font-size: 1.5rem;
+}
+.register-container input{
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid black;
+    font-size: 1rem;
+    border-radius: 0.7rem;
+}
+.register-container p{
+    margin: 1rem;
+    font-size: 2rem;
+}
+.login-container{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    text-align: center;
+}
+.login-container label{
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+    font-size: 1.5rem;
+}
+.login-container input{
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid black;
+    font-size: 1rem;
+    border-radius: 0.7rem;
+}
+.login-container p{
+    margin: 1rem;
+    font-size: 2rem;
+}
+.full-chat-block{
+    height: max-content;
+
+}
+.chat-bar{
+    background-color: white;
+    width: fit-content;
+    height: 20rem;
+    position: fixed;
+    bottom: 4rem;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+    z-index: 1000;
+}
+.chat-container{
+    padding: 1rem;
+    margin: 1rem;
+}
+.chat-bar button{
+    background-color: lightgrey;
+    width:21rem;
+}
+#chatbox span{
+    font-size: 1.5rem;
+}
+#userInput{
+    width: 75%;
+}
+.chat-bar-input-block{
+    display: flex;
+    position: fixed;
+    bottom:5rem;
+}
+
+/*#chatbox{
+    text-align: left;
+}
+#userInput p{
+    text-align: right;
+}*/
+.input-box{
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+.chat-bar-icons{
+    display: flex;
+    margin-top: 0.7rem;
+}
+.chat-bar-icons i{
+    margin: 0.35rem;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+.chat-bar-icons i:hover{
+    opacity: 1;
+    font-size: 1.25rem;
+}
+@media (max-width:1200px) {
+    .side-bar{
+        height: 100%;
+    }
+    .header.section{
+        width: 100%;
+    }
+    .footer{
+        width:100%;
+    }
+    .chatbot-header{
+        width: 100;
+        background-color: lightgray;
+    }
+}
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width:768px){
+    #search-btn{
+        display: inline-block;
+    }
+    .search-form{
+        position: absolute;
+        top: 99%; left:0; right:0;
+        width: auto;
+        background-color: white;
+        margin-top: 3px;
+    }
+}
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    body{
+        font-size: 50%;
+        padding-left: 0;
+    }
+    .side-bar{
+        transition: 0.2s linear;
+        left:-30rem;
+    }
+    .search-form{
+        top:-5rem;
+    }
+}
